@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbmuk4syjakyq"]
+
+[ext_resource type="Script" uid="uid://bqjtjej66bvpv" path="res://home_page.gd" id="1_sc02a"]
+
+[sub_resource type="FontVariation" id="FontVariation_1x2uf"]
+
+[sub_resource type="FontVariation" id="FontVariation_jiwto"]
+base_font = SubResource("FontVariation_1x2uf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eu37"]
+bg_color = Color(0.49941152, 0.6608581, 0.30566388, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ou0my"]
+specular_color = Color(0.4713862, 0.46973974, 0.6330241, 1)
+texture_filter = 1
+
+[node name="HomePage" type="Node2D"]
+script = ExtResource("1_sc02a")
+
+[node name="START" type="Button" parent="."]
+offset_left = 426.0
+offset_top = 138.0
+offset_right = 897.0
+offset_bottom = 407.0
+theme_override_fonts/font = SubResource("FontVariation_jiwto")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_4eu37")
+text = "START"
+icon = SubResource("CanvasTexture_ou0my")
+
+[connection signal="pressed" from="START" to="." method="_on_start_pressed"]
